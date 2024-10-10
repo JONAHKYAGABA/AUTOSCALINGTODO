@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-PROJECT_MAIN_DIR_NAME="todo_master"
+PROJECT_MAIN_DIR_NAME="AUTOSCALINGTODO"
 
 # Validate variables
 if [ -z "$PROJECT_MAIN_DIR_NAME" ]; then
