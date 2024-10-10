@@ -1,0 +1,57 @@
+.app-content {
+    position: relative;
+}
+
+div.add {
+    float: right;
+    clear: left;
+}
+
+.text-gray-600 {
+  color: #27104E;
+}
+
+.branded {
+  justify-content: start;
+}
+
+.aligned {
+  text-align: center;
+}
+
+.flexed {
+  justify-content: space-between;
+  display: flex;
+}
+
+.flexed1 {
+  flex: 1;
+}
+
+#coloured {
+  color: #F3F5F9;
+}
+
+.scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(171deg, #47126b 38%, #f72585);
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  z-index: 9999;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  opacity: 0.8;
+  color: #fff;
+}

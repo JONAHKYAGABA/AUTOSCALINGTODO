@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="{% static 'todo/assets/bootstrap/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&amp;display=swap">
+    <link rel="stylesheet" href="{% static 'todo/assets/fonts/fontawesome-all.min.css'%}">
+    <link rel="stylesheet" href="{% static 'todo/assets/css/Login-Form-Basic-icons.css'%}">
+    <link rel="stylesheet" href="{% static 'todo/assets/css/untitled.css'%}">
+    <link rel="stylesheet" href="{% static 'css/accounts.css' %}" />
+</head>
+
+<body style="max-width: 100vw;max-height: 100vh;height: 100vh;overflow: hidden;overflow-y: hidden;">
+    <section style="width: 100%;height: 100%;padding: 0px;" class="signup">
+        <div class="row" style="width: 100%;height: 100%;background: white;margin: 0px;">
+            <div class="col-md-6 col-sm-12" style="padding: 40px;background: #47126B;width: 50%;height: 100%;">
+                <div style="background: white;width: auto;height: auto;padding: 6px;text-align: center;display: inline-block;"><i class="fas fa-user-lock" style="width: 100%;font-size: 28px;"></i></div>
+                <h1 style="color: white;font-size: 22px;font-family: Poppins, sans-serif;margin-top: 30px;width: 80%;">Get more done with ease - Simplify your life with our ToDo!</h1><img class="rezed" src="{% static 'todo/assets/img/bubble-gum-verification.gif'%}" style="position: relative;margin-right: 0px;">
+            </div>
+            <div class="col-md-6 col-lg-6" style="padding: 40px;width: 60%;background: white;border-top-left-radius: 0px;border-bottom-left-radius: 0px;position: relative;height: 100%;margin-left: -10%;">
+                <div class="text-sm-end d-lg-flex ml-auto rightposned" style="position: absolute;">
+                    <div class="dropdown"><button class="btn btn-primary dropdown-toggle btntranslate" aria-expanded="false" data-bs-toggle="dropdown" type="button">ENGLISH(UK)&nbsp;</button>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
+                    </div>
+                </div>
+                <div style="margin-top: 50px;width: 70%;margin-right: 0px;margin-left: 30px;position: absolute;" class="extended">
+                    <h2 style="font-size: 25px;font-family: Poppins, sans-serif;font-weight: bold;text-align: left;margin-bottom: 30px;">Sign in</h2>
+                    <div class="spaced">
+                        <div class="d-lg-flex justify-content-lg-center align-items-lg-center signed" style="width: 190px;height: 45px;border-radius: 9px;border-top-left-radius: 9px;text-align: center;padding-left: 0px;margin-left: 0px;"><img src="{% static 'todo/assets/img/search%201.png'%}" style="height: 25px;">
+                            <p style="margin-bottom: 0px;margin-left: 10px;font-size: 12px;">Sign up with Google </p>
+                        </div>
+                        <div class="d-lg-flex justify-content-lg-center align-items-lg-center signed" style="display: flex;width: 190px;height: 45px;border-radius: 9px;border-top-left-radius: 9px;padding-left: 0px;text-align: center;border-top-right-radius: 9p;"><img src="{% static 'todo/assets/img/facebook%201.png'%}" style="height: 25px;">
+                            <p style="margin-bottom: 0px;margin-left: 10px;font-size: 12px;">Sign up with facebook</p>
+                        </div>
+                    </div>
+                    <h1 style="font-size: 18px;font-family: Poppins, sans-serif;text-align: center;margin-top: 40px;color: #909090;margin-bottom: 30px;">-OR-</h1>
+                    <div class="formed">
+                            <form class="signup-form"method="POST">
+                            {% csrf_token %}
+                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="label" for="username">Username</label>
+                                                        {{ form.username }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="label" for="password">Password</label>
+                                                        {{ form.password }}
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary">Sign In</button>
+                                </div>
+                            </div>
+                            </form>
+                            <div class="w-100">
+                                <p class="mt-4">Don't have an account? <a href="{% url 'to_do_list:signup' %}">Register</a></p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'base/js.html' %}
+</body>
+
+</html>

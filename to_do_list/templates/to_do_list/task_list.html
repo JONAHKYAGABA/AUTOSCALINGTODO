@@ -1,0 +1,59 @@
+{% extends 'to_do_list/main.html' %}
+{% block content %}
+
+{% if request.user.is_authenticated %}
+<div class="row" style= "width = 100% ">
+  <div class="col-lg-6 mb-4"   >
+    <div class="card shadow mb-4"></div>
+    <div class="card shadow mb-4" style= "width = 100% " >
+      <div class="card-header py-3">
+        <h6 style="color: #27104e; font-weight: bold">
+          Todo List
+        </h6>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          
+          <div class="row align-items-center no-gutters "data-position="{{task.pk}}" >
+            {% for task in tasks %}
+            <div class="col me-2">
+              <a href="{% url 'to_do_list:task-update' task.id %}">
+              <h6 class="mb-0"><strong>{{task}}</strong></h6></a> 
+              
+              <span style="float: right;" class="timer"><b >{{ task.due|timeuntil }}</b> </span>
+            </div>""
+            <div class="col-auto">
+                           <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="formCheck-1"
+                /><label
+                  class="form-check-label"
+                  for="formCheck-1"
+                ></label>
+              
+              </div>
+              <div class="task-controls">
+                <a class="delete-link"  href="{% url 'to_do_list:task-delete' task.id %}"><i class="far fa-trash-alt"></i></a>
+                                <span class="handle">&nbsp;&#10247;</span>
+            </div>
+            </div>
+            {% endfor %}
+          </div>
+          
+        </li>
+        {% endif %}
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div>
+<div><img /></div>
+</div>
+
+
+
+{% endblock content %}

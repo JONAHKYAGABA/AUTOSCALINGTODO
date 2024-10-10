@@ -1,0 +1,107 @@
+#mainNav .navbar-brand {
+  color: #f72585;
+  font-family: "Catamaran","Helvetica","Arial","sans-serif";
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+.btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
+  color: var(--bs-btn-active-color);
+  background-color: var(--bs-btn-active-bg);
+  border-color: var(--bs-btn-active-border-color);
+}
+
+.btntranslatehover, .btntranslatefocus, .btntranslateactive, .btntranslate.active {
+  color: #fff;
+  border-color: #fdcc52;
+  background-color: #fdcc52;
+}
+
+
+.btn {
+  color: #A1A1A1;
+  border: 1px solid;
+  /*border-color: none;*/
+}
+
+
+.btntranslate {
+  background-color: white;
+  font-size: 14px;
+  border: none;
+}
+
+.ml-auto.rightposned {
+  right: 0;
+  margin-right: 50px;
+}
+
+.btntranslate:hover, .btntranslate:active, .btntranslate:focus {
+  background-color: #f72585;
+}
+
+.rezed {
+  z-index: 4;
+  height: 100%;
+  margin-top: 50px;
+  margin-right: 0px;
+  right: -10%;
+  top: -20%;
+  transform: rotate(0deg);
+}
+
+.signup {
+  justify-items: center;
+  align-items: center;
+}
+
+.google {
+  text-align: center;
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+.spaced {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.formed {
+  align-items: center;
+  justify-content: center;
+  display: block;
+}
+
+#email-2:hover #email-2:active #email-2:focus {
+  border: chartreuse;
+}
+
+
+.btncreate {
+  background: linear-gradient(#F72585, #B5179E);
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.extended {
+  right: 10%;
+}
+
+@media (min-width: 992px) {
+  .d-lg-flex {
+    display: flex !important;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .rezed {
+    display: none;
+  }
+
+  .col-sm-12 {
+    display: none;
+  }
+}
+

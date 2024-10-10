@@ -1,0 +1,52 @@
+.app-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: linear-gradient(171deg, #47126b 38%, #f72585);
+  z-index: 1030;
+  padding-right: 15px;
+}
+
+.app-sidebar__toggle:focus, .app-sidebar__toggle:hover {
+  color: #fff;
+  background-color: #740863;
+  text-decoration: none;
+}
+
+.app-sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: 70px;
+  width: 230px;
+  overflow: auto;
+  z-index: 10;
+  background: linear-gradient(171deg, #47126b 38%, #f72585);
+  -webkit-box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.2);
+  -webkit-transition: left 0.3s ease,
+ width 0.3s ease;
+  -o-transition: left 0.3s ease,
+ width 0.3s ease;
+  transition: left 0.3s ease,
+ width 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .app-header__logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    display: block;
+    width: 230px;
+    background-color: #290442;
+  }
+}
+
+

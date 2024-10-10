@@ -1,0 +1,111 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}User Profile{% endblock title %}
+
+{% block extracss %}
+  
+{% endblock extracss %}
+
+{% block breadcrumb %}
+  <div>
+      <h1><i class="fa fa-user fa-lg"></i> Profile</h1>
+      <p>User Profile</p>
+  </div>
+  <ul class="app-breadcrumb breadcrumb">
+      <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+      <li class="breadcrumb-item"><a href="#">Calendar</a></li>
+  </ul>
+{% endblock breadcrumb %}
+
+{% block content %}
+          <div class="container-fluid">
+                    <h3 style="color: #27104E;">Profile</h3>
+                    <div class="row mb-3">
+                        <div class="col-lg-4">
+                            <div class="card mb-3">
+                                <div class="card-body text-center shadow"><img class="rounded-circle mb-3 mt-4" src="{% static 'todo_list/assets/img/avatars/profile.jpeg'%}" width="160" height="160">
+                                    <div class="mb-3"><button class="btn btn-primary btn-sm" type="button" style="background: linear-gradient(#F72585, #B5179E);border-style: none;">Change Photo</button></div>
+                                </div>
+                            </div>
+                           
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="row mb-3 d-none">
+                                <div class="col">
+                                    <div class="card text-white bg-primary shadow">
+                                        <div class="card-body">
+                                            <div class="row mb-2">
+                                                <div class="col">
+                                                    <p class="m-0">Peformance</p>
+                                                    <p class="m-0"><strong>65.2%</strong></p>
+                                                </div>
+                                                <div class="col-auto"><i class="fas fa-rocket fa-2x"></i></div>
+                                            </div>
+                                            <p class="text-white-50 small m-0"><i class="fas fa-arrow-up"></i>&nbsp;5% since last month</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card text-white bg-success shadow">
+                                        <div class="card-body">
+                                            <div class="row mb-2">
+                                                <div class="col">
+                                                    <p class="m-0">Peformance</p>
+                                                    <p class="m-0"><strong>65.2%</strong></p>
+                                                </div>
+                                                <div class="col-auto"><i class="fas fa-rocket fa-2x"></i></div>
+                                            </div>
+                                            <p class="text-white-50 small m-0"><i class="fas fa-arrow-up"></i>&nbsp;5% since last month</p>
+                                        </div>
+                                    </div>
+                                </div>
+</div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card shadow mb-3">
+                                        <div class="card-header py-3">
+                                            <p style="color: #27104E;font-weight: bold;">User Settings</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <form>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="mb-3"><label class="form-label" for="username" style="color: #64379F;"><strong>Username</strong></label><input class="form-control" type="text" id="username" placeholder="{{request.user|title}}" name="username"></div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="mb-3"><label class="form-label" for="email" style="color: #64379F;"><strong>Email Address</strong></label><input class="form-control" type="email" id="email" placeholder="{{request.user.email}}" name="email"></div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="mb-3"><button class="btn btn-primary btn-sm" type="submit" style="background: linear-gradient(#F72585, #B5179E);border-style: none;">Save Settings</button></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="card shadow">
+                                        <div class="card-header py-3">
+                                            <p style="font-weight: bold;color: #27104E;">Contact Settings</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <form>
+                                                <div class="mb-3"><label class="form-label" for="address" style="color: #64379F;"><strong>Address</strong></label><input class="form-control" type="text" id="address" placeholder="Nansana, Yesu Amala" name="address"></div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="mb-3"><label class="form-label" for="city" style="color: #64379F;"><strong>City</strong></label><input class="form-control" type="text" id="city" placeholder="Wakiso" name="city"></div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="mb-3"><label class="form-label" for="country" style="color: #64379F;"><strong>Country</strong></label><input class="form-control" type="text" id="country" placeholder="UGANDA" name="country"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3"><button class="btn btn-primary btn-sm" type="submit" style="background: linear-gradient(#F72585, #B5179E);border-style: none;">Save&nbsp;Settings</button></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+
+{% endblock content %}

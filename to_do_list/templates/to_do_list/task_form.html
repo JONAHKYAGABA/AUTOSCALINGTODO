@@ -1,0 +1,60 @@
+{% extends 'to_do_list/main.html' %}
+
+{% block content %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/south-street/jquery-ui.min.css" integrity="sha256-/8xGgcV6Mp9fFa2u2lLYOWYNluCdrHEvBfiwhpkD/Js=" crossorigin="anonymous" />
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/south-street/theme.min.css" integrity="sha256-j5WK5GB3+w3i2jRf0bV9dkjJ+mm+TiSEG6WgNiD+gWk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.structure.min.css" integrity="sha256-rxais37anKUnpL5QzSYte+JnIsmkGmLG+ZhKSkZkwVM=" crossorigin="anonymous" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dmuy/MDTimePicker.min/dist/mdtimepicker.js/mdtimepicker.css">
+
+<h3>Create Task</h3>
+
+<form method="POST" action="{% url 'to_do_list:task-create' %}">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" class="form-control" id="title" name="title">
+    </div>
+    <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea class="form-control" id="description" name="description"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="due">Due date:</label>
+        <input type="text" class="form-control" id="due" name="due">
+    </div>
+    <div class="form-group">
+        <label for="time">Reminder time:</label>
+        <input type="text"  id="timepicker" name="time">
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+
+<script
+  src="https://code.jquery.com/jquery-3.5.0.min.js"
+  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+  crossorigin="anonymous">
+</script>
+<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous">
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/dmuy/MDTimePicker.min/dist/mdtimepicker.js/mdtimepicker.min.js"></script>
+<script>
+    
+$(document).ready(function() {
+    $('#due').datepicker({
+        dateFormat: 'yy-mm-dd'
+    });
+    $('.mdtimepicker').mdtimepicker({
+        timeFormat: 'hh:mm',
+        theme: 'purple'
+    });
+});
+
+</script>
+{% endblock content %}
